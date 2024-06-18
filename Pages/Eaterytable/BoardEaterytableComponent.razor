@@ -1,0 +1,85 @@
+﻿@page "/eaterytable"
+@page "/boardeaterytablecomponent"
+@using VirtualWaiter.Application.Services.Eaterytable;
+
+@inject IEaterytableServices eaterytableServices
+@inject NavigationManager navigation
+
+<MudContainer>
+    <MudGrid>
+        <MudItem xs="12" md="6">
+
+            <MudButton OnClick="NewEaterytable" Variant="Variant.Filled">
+                <b>Agregar</b>
+            </MudButton>
+        </MudItem>
+    </MudGrid>
+
+    <div style="height: 20px;"></div>
+
+    <MudTable Items="@eaterytable" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Id</MudTh>
+            <MudTh>Número</MudTh>
+            <MudTh>Capacidad</MudTh>
+            <MudTh>Estado</MudTh>
+            <MudTh>Editar</MudTh>
+            <MudTh>Cambiar estado</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Id">@context.Id</MudTd>
+            <MudTd DataLabel="Number">@context.Number</MudTd>
+            <MudTd DataLabel="Capacity">@context.Capacity</MudTd>
+            <MudTd DataLabel="Active">@context.Active.ToBoolString()</MudTd>
+            <MudTd DataLabel="Edit">
+                <MudIconButton Icon="@Icons.Filled.Edit" OnClick="@(() => EditEaterytable(context))"></MudIconButton>
+            </MudTd>
+            <MudTd DataLabel="Delete" Alignment="Alignment.Center">
+                <MudIconButton Icon="@Icons.Filled.SwapHorizontalCircle" OnClick="@(() => DeleteEaterytable(context.Id))"></MudIconButton>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudContainer>
+
+@code {
+    IEnumerable<EaterytableResponseDTO> eaterytable = null;
+    private bool _loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetEaterytable();
+    }
+
+    private async Task GetEaterytable()
+    {
+        var result = await eaterytableServices.GetEaterytable();
+
+        if (result.Any())
+        {
+            eaterytable = result;
+        }
+        _loading = false;
+    }
+
+    private async Task NewEaterytable()
+    {
+        navigation.NavigateTo("/addeaterytablecomponent");
+        await GetEaterytable();
+    }
+
+    private async Task EditEaterytable(EaterytableResponseDTO item)
+    {
+        navigation.NavigateTo($"/updateeaterytablecomponent/{item.Id}");
+        await GetEaterytable();
+    }
+
+    private async Task DeleteEaterytable(int id)
+    {
+        var result = await eaterytableServices.Delete(id);
+        if (result)
+        {
+            await GetEaterytable();
+        }
+    }
+}
+

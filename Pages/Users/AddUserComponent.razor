@@ -1,0 +1,127 @@
+﻿@page "/addusercomponent"
+@page "/addusercomponent/{id:int}"
+@using VirtualWaiter.Application.Services.User;
+
+@inject IUserServices userServices
+@inject NavigationManager navigation
+
+<EditForm Model="@newUser" OnValidSubmit="Save">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <MudGrid>
+        <MudItem xs="6">
+            <MudTextField @bind-Value="newUser.RoleCode" Label="Rol" Margin="Margin.Dense" MaxLength="20" For="@(() => newUser.RoleCode)" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudTextField @bind-Value="newUser.Name" Label="Nombres" Margin="Margin.Dense" MaxLength="20" For="@(() => newUser.Name)" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudTextField @bind-Value="newUser.LastName" Label="Apellidos" Margin="Margin.Dense" MaxLength="20" For="@(() => newUser.LastName)" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudTextField @bind-Value="newUser.Identification" Label="Identificación" Margin="Margin.Dense" MaxLength="20" For="@(() => newUser.Identification)" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudDatePicker @bind-Date="newUser.Birthday" Label="Fecha de cumpleaños" Margin="Margin.Dense" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudTextField @bind-Value="newUser.Phone" Label="Teléfono" Margin="Margin.Dense" MaxLength="20" For="@(() => newUser.Phone)" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudTextField @bind-Value="newUser.Email" Label="Correo" Margin="Margin.Dense" MaxLength="20" For="@(() => newUser.Email)" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudSelect Label="Estado" @bind-Value="newUser.Active" Margin="Margin.Dense">
+                @if (states != null)
+                {
+                    foreach (var item in states)
+                    {
+                        <MudSelectItem T="sbyte" Value="@item.Id">@item.Description</MudSelectItem>
+                    }
+                }
+            </MudSelect>
+        </MudItem>
+
+        <MudItem xs="4">
+            <MudStack Row="true">
+                <MudButton ButtonType="ButtonType.Submit" Color="Color.Primary">Guardar</MudButton>
+                <MudButton OnClick="Cancel" Color="Color.Error">Cancelar</MudButton>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    private UserRqCreateDTO newUser = new();
+    private List<StatesDto> states = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        states = await GetState();
+
+        if (id > 0)
+        {
+            var userToEdit = await userServices.GetUserById(id.ToString());
+            newUser = new UserRqCreateDTO
+                {
+                    RoleCode = userToEdit.RoleCode,
+                    Name = userToEdit.Name,
+                    LastName = userToEdit.LastName,
+                    Identification = userToEdit.Identification,
+                    Birthday = userToEdit.Birthday,
+                    Phone = userToEdit.Phone,
+                    Email = userToEdit.Email,
+                    Active = userToEdit.Active
+                };
+        }
+    }
+
+    private async Task Save()
+    {
+        try
+        {
+            var result = await userServices.Save(newUser);
+
+            if (result)
+            {
+                navigation.NavigateTo("/boardusercomponent");
+            }
+
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine(ex.Message);
+
+        }
+    }
+
+    public class StatesDto
+    {
+        public sbyte Id { get; set; }
+        public string Description { get; set; }
+    }
+
+    public async Task<List<StatesDto>> GetState()
+    {
+        var statesL = new List<StatesDto>
+        {
+            new StatesDto { Id = 1, Description = "Activo" },
+            new StatesDto { Id = 0, Description = "Inactivo" }
+        };
+        return await Task.FromResult(statesL);
+    }
+
+    public void Cancel() => navigation.NavigateTo("/boardusercomponent");
+
+    public PatternMask maskInt = new("000000");
+}

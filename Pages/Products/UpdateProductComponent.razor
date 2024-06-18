@@ -1,0 +1,97 @@
+﻿@page "/updateproductcomponent/{id}"
+
+@inject IProductServices productServices
+@inject NavigationManager navigation
+
+<EditForm Model="@product" OnValidSubmit="UpdateProduct">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="6">
+            <MudTextField @bind-Value="product.Name" Label="Nombre" Margin="Margin.Dense" MaxLength="20" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudTextField @bind-Value="product.Description" Label="Descripción" Margin="Margin.Dense" MaxLength="20" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudTextField @bind-Value="product.Price" Label="Precio" Margin="Margin.Dense" MaxLength="20" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudSelect Label="Estado" @bind-Value="product.Active" Margin="Margin.Dense">
+                @if (states != null)
+                {
+                    foreach (var item in states)
+                    {
+                        <MudSelectItem T="sbyte" Value="@item.Id">@item.Description</MudSelectItem>
+                    }
+                }
+            </MudSelect>
+        </MudItem>
+
+        <MudItem xs="4">
+            <MudStack Row="true">
+                <MudButton ButtonType="ButtonType.Submit" Color="Color.Primary">Guardar</MudButton>
+                <MudButton OnClick="Cancel" Color="Color.Error">Cancelar</MudButton>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string id { get; set; }
+
+    private ProductRequestDTO product = new();
+    private List<StatesDto> states = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        states = await GetState();
+        product = await productServices.GetProductBydId(id);
+    }
+
+    private async Task UpdateProduct()
+    {
+        try
+        {
+            var result = await productServices.Update(product);
+
+            if (result)
+            {
+                navigation.NavigateTo("/boardproductcomponent");
+            }
+           
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine(ex.Message);
+            
+        }
+        
+        
+       
+    }
+
+    private void Cancel()
+    {
+        navigation.NavigateTo("/boardproductcomponent");
+    }
+
+    public class StatesDto
+    {
+        public sbyte Id { get; set; }
+        public string Description { get; set; }
+    }
+
+    public async Task<List<StatesDto>> GetState()
+    {
+        var statesL = new List<StatesDto>
+        {
+            new StatesDto { Id = 1, Description = "Activo" },
+            new StatesDto { Id = 0, Description = "Inactivo" }
+        };
+        return statesL;
+    }
+}

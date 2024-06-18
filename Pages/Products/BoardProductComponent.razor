@@ -1,0 +1,84 @@
+﻿@page "/boardproductcomponent"
+
+@inject IProductServices productServices
+@inject NavigationManager navigation
+
+<MudContainer>
+    <MudGrid>
+        <MudItem xs="12" md="6">
+          
+            <MudButton OnClick="NewProduct" Variant="Variant.Filled">
+                <b>Agregar</b>
+            </MudButton>
+        </MudItem>
+    </MudGrid>
+
+    <div style="height: 20px;"></div>
+
+    <MudTable Items="@products" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Id</MudTh>
+            <MudTh>Nombre</MudTh>
+            <MudTh>Descripción</MudTh>
+            <MudTh>Precio</MudTh>
+            <MudTh>Estado</MudTh>
+            <MudTh>Editar</MudTh>
+            <MudTh>Cambiar estado</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Id">@context.Id</MudTd>
+            <MudTd DataLabel="Name">@context.Name</MudTd>
+            <MudTd DataLabel="Description">@context.Description</MudTd>
+            <MudTd DataLabel="Price">@context.Price.ToStringDecimal()</MudTd>
+            <MudTd DataLabel="Active">@context.Active.ToBoolString()</MudTd>
+            <MudTd DataLabel="Edit">
+                <MudIconButton Icon="@Icons.Filled.Edit" OnClick="@(() => EditProduct(context))"></MudIconButton>
+            </MudTd>
+            <MudTd DataLabel="Delete" Alignment="Alignment.Center">
+                <MudIconButton Icon="@Icons.Filled.SwapHorizontalCircle" OnClick="@(() => DeleteProduct(context.Id))"></MudIconButton>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudContainer>
+
+@code {
+    IEnumerable<ProductResponseDTO> products = null;
+    private bool _loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetProducts();
+    }
+
+    private async Task GetProducts()
+    {
+        var result = await productServices.GetProducts();
+
+        if (result.Any())
+        {
+            products = result;
+        }
+        _loading = false;
+    }
+
+    private async Task NewProduct()
+    {
+        navigation.NavigateTo("/addproductcomponent");
+        await GetProducts();
+    }
+
+    private async Task EditProduct(ProductResponseDTO item)
+    {
+        navigation.NavigateTo($"/updateproductcomponent/{item.Id}");
+        await GetProducts();
+    }
+
+    private async Task DeleteProduct(int id)
+    {
+        var result = await productServices.Delete(id);
+        if (result)
+        {
+            await GetProducts();
+        }
+    }
+}

@@ -1,0 +1,95 @@
+﻿@page "/users"
+@page "/boardusercomponent"
+@using VirtualWaiter.Application.Services.User;
+
+@inject IUserServices userServices
+@inject NavigationManager navigation
+
+<MudContainer>
+    <MudGrid>
+        <MudItem xs="12" md="6">
+
+            <MudButton OnClick="NewUser" Variant="Variant.Filled">
+                <b>Agregar</b>
+            </MudButton>
+        </MudItem>
+    </MudGrid>
+
+    <div style="height: 20px;"></div>
+
+    <MudTable Items="@users" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Id</MudTh>
+            <MudTh>Rol</MudTh>
+            <MudTh>Nombres</MudTh>
+            <MudTh>Apellidos</MudTh>
+            <MudTh>Identificación</MudTh>
+            <MudTh>Fecha de cumpleaños</MudTh>
+            <MudTh>Teléfono</MudTh>
+            <MudTh>Correo</MudTh>
+            <MudTh>Estado</MudTh>
+            <MudTh>Editar</MudTh>
+            <MudTh>Cambiar estado</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Id">@context.Id</MudTd>
+            <MudTd DataLabel="RoleCode">@context.RoleCode</MudTd>
+            <MudTd DataLabel="Name">@context.Name</MudTd>
+            <MudTd DataLabel="LastName">@context.LastName</MudTd>
+            <MudTd DataLabel="Identification">@context.Identification</MudTd>
+            <MudTd DataLabel="Birthday">@context.Birthday?.ToString("dd/MM/yyyy")</MudTd>
+            <MudTd DataLabel="Phone">@context.Phone</MudTd>
+            <MudTd DataLabel="Email">@context.Email</MudTd>
+            <MudTd DataLabel="Active">@context.Active.ToBoolString()</MudTd>
+            <MudTd DataLabel="Edit">
+                <MudIconButton Icon="@Icons.Filled.Edit" OnClick="@(() => EditUser(context))"></MudIconButton>
+            </MudTd>
+            <MudTd DataLabel="Delete" Alignment="Alignment.Center">
+                <MudIconButton Icon="@Icons.Filled.SwapHorizontalCircle" OnClick="@(() => DeleteUser(context.Id))"></MudIconButton>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudContainer>
+
+@code {
+    IEnumerable<UserResponseDTO> users = null;
+    private bool _loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetUser();
+    }
+
+    private async Task GetUser()
+    {
+        var result = await userServices.GetUser();
+
+        if (result.Any())
+        {
+            users = result;
+        }
+        _loading = false;
+    }
+
+    private async Task NewUser()
+    {
+        navigation.NavigateTo("/addusercomponent");
+        await GetUser();
+    }
+
+    private async Task EditUser(UserResponseDTO item)
+    {
+        navigation.NavigateTo($"/updateusercomponent/{item.Id}");
+        await GetUser();
+    }
+
+    private async Task DeleteUser(int id)
+    {
+        var result = await userServices.Delete(id);
+        if (result)
+        {
+            await GetUser();
+        }
+    }
+}
+

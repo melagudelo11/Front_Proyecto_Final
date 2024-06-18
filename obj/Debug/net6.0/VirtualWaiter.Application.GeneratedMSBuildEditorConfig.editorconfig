@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VirtualWaiter.Application
+build_property.RootNamespace = VirtualWaiter.Application
+build_property.ProjectDir = D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Eaterytable/AddEaterytableComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWF0ZXJ5dGFibGVcQWRkRWF0ZXJ5dGFibGVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Eaterytable/BoardEaterytableComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWF0ZXJ5dGFibGVcQm9hcmRFYXRlcnl0YWJsZUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Eaterytable/UpdateEaterytableComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWF0ZXJ5dGFibGVcVXBkYXRlRWF0ZXJ5dGFibGVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Products/AddProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcQWRkUHJvZHVjdENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Products/BoardProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcQm9hcmRQcm9kdWN0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Products/UpdateProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcVXBkYXRlUHJvZHVjdENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Users/AddUserComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcQWRkVXNlckNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Users/BoardUserComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcQm9hcmRVc2VyQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Users/UpdateUserComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcVXBkYXRlVXNlckNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SENA/Proyecto Final/VirtualWaiter/VirtualWaiter.Application/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

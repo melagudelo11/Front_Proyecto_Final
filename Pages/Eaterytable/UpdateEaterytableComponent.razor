@@ -1,0 +1,92 @@
+﻿@page "/updateeaterytablecomponent/{id}"
+@using VirtualWaiter.Application.Services.Eaterytable;
+
+@inject IEaterytableServices eaterytableServices
+@inject NavigationManager navigation
+
+<EditForm Model="@eaterytable" OnValidSubmit="UpdateEaterytable">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="6">
+            <MudTextField @bind-Value="eaterytable.Number" Label="Número" Margin="Margin.Dense" MaxLength="20" For="@(() => eaterytable.Number)" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudTextField @bind-Value="eaterytable.Capacity" Label="Capacidad" Margin="Margin.Dense" MaxLength="20" For="@(() => eaterytable.Capacity)" />
+        </MudItem>
+
+        <MudItem xs="6">
+            <MudSelect Label="Estado" @bind-Value="eaterytable.Active" Margin="Margin.Dense">
+                @if (states != null)
+                {
+                    foreach (var item in states)
+                    {
+                        <MudSelectItem T="sbyte" Value="@item.Id">@item.Description</MudSelectItem>
+                    }
+                }
+            </MudSelect>
+        </MudItem>
+
+        <MudItem xs="4">
+            <MudStack Row="true">
+                <MudButton ButtonType="ButtonType.Submit" Color="Color.Primary">Guardar</MudButton>
+                <MudButton OnClick="Cancel" Color="Color.Error">Cancelar</MudButton>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string id { get; set; }
+
+    private EaterytableRequestDTO eaterytable = new();
+    private List<StatesDto> states = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        states = await GetState();
+        eaterytable = await eaterytableServices.GetEaterytableById(id);
+    }
+
+    private async Task UpdateEaterytable()
+    {
+        try
+        {
+            var result = await eaterytableServices.Update(eaterytable);
+
+            if (result)
+            {
+                navigation.NavigateTo("/boardeaterytablecomponent");
+            }
+
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine(ex.Message);
+
+        }
+
+    }
+
+    private void Cancel()
+    {
+        navigation.NavigateTo("/boardeaterytablecomponent");
+    }
+
+    public class StatesDto
+    {
+        public sbyte Id { get; set; }
+        public string Description { get; set; }
+    }
+
+    public async Task<List<StatesDto>> GetState()
+    {
+        var statesL = new List<StatesDto>
+        {
+            new StatesDto { Id = 1, Description = "Activo" },
+            new StatesDto { Id = 0, Description = "Inactivo" }
+        };
+        return statesL;
+    }
+}

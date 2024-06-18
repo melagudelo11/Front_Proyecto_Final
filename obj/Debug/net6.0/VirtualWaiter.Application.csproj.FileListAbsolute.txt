@@ -1,0 +1,78 @@
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\appsettings.Development.json
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\appsettings.json
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.staticwebassets.runtime.json
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.exe
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.deps.json
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.runtimeconfig.json
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.pdb
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.JSInterop.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\MudBlazor.dll
+C:\Repos\Test\VirtualWaiter.Application\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.csproj.AssemblyReference.cache
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.AssemblyInfoInputs.cache
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.AssemblyInfo.cs
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.csproj.CoreCompileInputs.cache
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.MvcApplicationPartsAssemblyInfo.cache
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.RazorAssemblyInfo.cache
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.RazorAssemblyInfo.cs
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets.build.json
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets.development.json
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets\msbuild.VirtualWaiter.Application.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets\msbuild.build.VirtualWaiter.Application.props
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.VirtualWaiter.Application.props
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.VirtualWaiter.Application.props
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\scopedcss\bundle\VirtualWaiter.Application.styles.css
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.csproj.CopyComplete
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.dll
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\refint\VirtualWaiter.Application.dll
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.pdb
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.genruntimeconfig.cache
+C:\Repos\Test\VirtualWaiter.Application\obj\Debug\net6.0\ref\VirtualWaiter.Application.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\appsettings.Development.json
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\appsettings.json
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.staticwebassets.runtime.json
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.exe
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.deps.json
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.runtimeconfig.json
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\VirtualWaiter.Application.pdb
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\Microsoft.JSInterop.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\MudBlazor.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\bin\Debug\net6.0\System.IO.Pipelines.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.csproj.AssemblyReference.cache
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.AssemblyInfoInputs.cache
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.AssemblyInfo.cs
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.csproj.CoreCompileInputs.cache
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.MvcApplicationPartsAssemblyInfo.cache
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.RazorAssemblyInfo.cache
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.RazorAssemblyInfo.cs
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets\msbuild.VirtualWaiter.Application.Microsoft.AspNetCore.StaticWebAssets.props
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets\msbuild.build.VirtualWaiter.Application.props
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.VirtualWaiter.Application.props
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.VirtualWaiter.Application.props
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets.pack.json
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets.build.json
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\staticwebassets.development.json
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\scopedcss\bundle\VirtualWaiter.Application.styles.css
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.csproj.CopyComplete
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\refint\VirtualWaiter.Application.dll
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.pdb
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\VirtualWaiter.Application.genruntimeconfig.cache
+D:\SENA\Proyecto Final\VirtualWaiter\VirtualWaiter.Application\obj\Debug\net6.0\ref\VirtualWaiter.Application.dll

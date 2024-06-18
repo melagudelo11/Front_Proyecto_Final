@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\SENA\\Proyecto Final\\VirtualWaiter\\VirtualWaiter.Application\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.VirtualWaiter.Application.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.VirtualWaiter.Application.props",
+      "PackagePath": "build\\VirtualWaiter.Application.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.VirtualWaiter.Application.props",
+      "PackagePath": "buildMultiTargeting\\VirtualWaiter.Application.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.VirtualWaiter.Application.props",
+      "PackagePath": "buildTransitive\\VirtualWaiter.Application.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
